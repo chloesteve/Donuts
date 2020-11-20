@@ -1,0 +1,147 @@
+
+/*Navigation Bar*/
+nav{
+    font-size: 1em;
+    margin: 0;
+    width: 100%;
+    background-color: rgb(255,235,205);
+}
+.navigation-bar{
+    margin: 0px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+}
+.navigation-bar li:hover{
+    background-color: rgb(275,222,179);
+    color: rgb(255,235,205); 
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+}
+
+nav li{
+    padding: 30px 30px;
+    list-style: none;
+    transition-property: background-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+.donuts-dropdown{
+    position: relative;
+}
+
+.donuts-drop {
+    width: 100%;
+    padding: 0;
+    position: absolute;
+    background-color: rgb(255,235,205);
+    text-align: center;
+    left: 0;
+    top: 100%;
+    border: 1px solid rgb(275,222,179);
+    border-bottom: none;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 100ms;
+    transition-timing-function: ease-in-out;
+    z-index: 2;
+}
+
+.donuts-drop li {
+    padding: 10px;
+    border-bottom: 1px solid rgb(275,222,179);
+}
+
+.donuts-drop li:hover {
+    background-color: rgb(255,235,205)
+}
+
+.donuts-dropdown:hover .donuts-drop {
+    opacity: 100;
+}
+
+.coffee-dropdown{
+    position: relative;
+}
+
+.coffee-drop {
+    width: 100%;
+    padding: 0;
+    position: absolute;
+    background-color: rgb(255,235,205);
+    text-align: center;
+    left: 0;
+    top: 100%;
+    border: 1px solid rgb(275,222,179);
+    border-bottom: none;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 100ms;
+    transition-timing-function: ease-in-out;
+    z-index: 2;
+}
+
+.coffee-drop li {
+    padding: 10px;
+    border-bottom: 1px solid rgb(275,222,179);
+}
+
+.coffee-drop li:hover {
+    background-color: rgb(255,235,205);
+}
+
+.coffee-dropdown:hover .coffee-drop {
+    opacity: 100;
+
+}
+body {
+    display: grid;
+    place-items: center;
+    padding:0;
+    margin:0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(275,222,179);
+    
+}
+
+.gallery {
+    display: grid;
+    gap: 10px;
+    max-width: 60vh;
+    grid-template-columns: 1fr 1fr;}
+
+.gallery-card {
+    text-align: center;
+    background-color: rgb(255,235,205);
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.gallery  img {
+    margin: 10px;
+    width: 100%;
+}
+
+@media (min-width: 1200px) {
+    .gallery {
+        max-width: 80vw;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+
+footer{
+    grid-area: footer;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem;
+    background-color: rgb(255,235,205);
+    color: black;
+    text-align: center;
+}
